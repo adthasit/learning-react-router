@@ -1,16 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react'
 import {render} from 'react-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
-class Home extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Hello World!!</h1>
-            </div>
-
-        );
-    }
-}
+import {Home} from './component'
 
 render(
-    <Home/>, document.getElementById('container'));
+   <Router>
+        <Route path="/" component={Home}/>
+    </Router>, 
+  document.getElementById('container'));
